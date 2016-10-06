@@ -62,9 +62,9 @@
   <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
   <script src="/bower_components/video.js/dist/video.js"></script>
   <script src="/bower_components/vjs-video/dist/vjs-video.min.js"></script>
-  <!-- endbower -->
+ <!-- <script src="/bower_components/videojs-playlists/dist/videojs-playlists.js"></script>
+   endbower -->
   <!-- endbuild -->
-
   <!-- build:js js/app.js -->
   <!-- inject:js -->
   <script src="/src/client/app/app.module.js"></script>
@@ -85,15 +85,17 @@
   <script src="/src/client/app/core/config.js"></script>
   <script src="/src/client/app/core/constants.js"></script>
   <script src="/src/client/app/core/core.route.js"></script>
-  <script src="/src/client/app/core/dataservice.js"></script>
+  <script src="/src/client/app/core/videoList.service.js"></script>
   <script src="/src/client/app/dashboard/dashboard.controller.js"></script>
   <script src="/src/client/app/dashboard/dashboard.route.js"></script>
+  <script src="/src/client/app/dashboard/videoListInitialize.js"></script>
   <script src="/src/client/app/layout/ht-sidebar.directive.js"></script>
   <script src="/src/client/app/layout/ht-top-nav.directive.js"></script>
   <script src="/src/client/app/layout/shell.controller.js"></script>
   <script src="/src/client/app/layout/sidebar.controller.js"></script>
   <script src="/src/client/app/widgets/ht-img-person.directive.js"></script>
   <script src="/src/client/app/widgets/ht-widget-header.directive.js"></script>
+  <script src="/src/client/app/widgets/video-hls.js"></script>
   <!-- endinject -->
 
   <!-- inject:templates:js -->
