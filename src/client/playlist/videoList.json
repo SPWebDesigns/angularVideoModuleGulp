@@ -1,51 +1,88 @@
 {
 	"bads":[
 	    {
-			"id":"video1",
+			"id":"videoBad1",
 			"url": "http://bad-videos.dev.zype.com/video1/zfaeEvbmOKYqguNR.m3u8",
 			"cod": "application/x-mpegURL",
 			"description": "Video is 3 hours, 8 minues, 52 seconds long"
 		},
 		{
-			"id":"video2",
+			"id":"videoBad2",
 			"url": "http://bad-videos.dev.zype.com/video4/U477ESYmVc5XQTTK.m3u8",
 			"cod": "application/x-mpegURL",
 			"description": "Video is 3 hours, 28 minutes, 59 seconds long"
 		},
 		{
-			"id":"video3",
+			"id":"videoBad3",
 			"url": "http://bad-videos.dev.zype.com/video3/_at63NQWIh9IIx7m.m3u8",
 			"cod": "application/x-mpegURL",
 			"description": "Video is 2 hours, 55 minutes, 10 seconds long"
 		},
 		{
-			"id":"video4",
+			"id":"videoBad4",
 			"url": "http://bad-videos.dev.zype.com/video2/erPQbYqt0EcCae8e.mp4",
 			"cod": "video/mp4",
 			"description": "Video is 2 hours, 40 minutes, 57 seconds long"
 		},
 		{
-			"id":"video5",
+			"id":"videoBad5",
 			"url": "http://bad-videos.dev.zype.com/video5/dH2vtLGAjHr6bd5w.m3u8",
 			"cod": "application/x-mpegURL",
 			"description": "Clip is 34 seconds long"
+		},
+		{
+			"id":"videoBad6",
+			"url": "http://bad-videos.dev.zype.com/video6/jnRDIFtgh1FYtGUT.m3u8",
+			"cod": "application/x-mpegURL",
+			"description": "Clip is long. Issues scrubbing "
+		},
+		{
+			"id":"videoBad7",
+			"url": "http://bad-videos.dev.zype.com/video7/dUHRDodFeTcMH0lr.m3u8",
+			"cod": "application/x-mpegURL",
+			"description": "Clip is long. Issues scrubbing "
+		},
+		{
+			"id":"videoBad8",
+			"url": "http://bad-videos.dev.zype.com/video8/Eh7k1HAIK7Z9orhv.m3u8",
+			"cod": "application/x-mpegURL",
+			"description": "Clip is long. Issues scrubbing "
+		},
+		{
+			"id":"videoBad9",
+			"url": "http://bad-videos.dev.zype.com/video9/jDJuepDf2A8y3p8A.m3u8",
+			"cod": "application/x-mpegURL",
+			"description": "Clip is long. Issues scrubbing "
+		},
+		{
+			"id":"videoBad10",
+			"url": "http://bad-videos.dev.zype.com/video10/bmKwYZbQHZGny1FD.m3u8",
+			"cod": "application/x-mpegURL",
+			"description": "Clip is long. Issues scrubbing "
+		},
+		{
+			"id":"videoBad11",
+			"url": "http://bad-videos.dev.zype.com/video11/haF-QayUxmR8dkVz.m3u8",
+			"cod": "application/x-mpegURL",
+			"description": "Clip is long. Issues scrubbing "
 		}
+		
 	],
 	"goods":[
 	    {
-			"id":"video1",
+			"id":"videoGood1",
 			"url": "http://bad-videos.dev.zype.com/good-video1/ArduinoTheDocumentary.mp4",
 			"cod": "video/mp4",
 			"description": "no info available"
 		},
 		{
-			"id":"video2",
+			"id":"videoGood2",
 			"url": "http://bad-videos.dev.zype.com/good-video2/sintel-2048-stereo.mp4",
 			"cod": "video/mp4",
 			"description": "no info available"
 		},
 		{
-			"id":"video3",
+			"id":"videoGood3",
 			"url": "http://bad-videos.dev.zype.com/good-video3/bipbopall.m3u8",
 			"cod": "application/x-mpegURL",
 			"description": "no info available"

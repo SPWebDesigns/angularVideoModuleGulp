@@ -30,7 +30,8 @@
     "angular-bootstrap": "^1.2.5",
     "vjs-video": "^0.1.6",
     "videojs-contrib-hls": "^3.6.0",
-    "videojs-playlists": "^0.2.0"
+    "videojs-playlists": "^0.2.0",
+    "videojs-playlist": "^3.0.0"
   },
   "resolutions": {
     "angular": "1.5.3"

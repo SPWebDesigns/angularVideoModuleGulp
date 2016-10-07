@@ -5,62 +5,85 @@
         <div class="widget wviolet">
           <div ht-widget-header title="{{vm.title}}"></div>
           <div class="widget-content user">
-            <h3>TODO: Implement Your Features</h3>
-            <!-- <video id=example-video width=960 height=540 class="video-js vjs-default-skin"  controls>
-                    <source
-                       src="https://d2zihajmogu5jn.cloudfront.net/bipbop-advanced/bipbop_16x9_variant.m3u8"
-                       type="application/x-mpegURL">
-            </video>
+            <video id="video" class="video-js vjs-default-skin vjs-big-play-centered" controls data-setup="" width="640" height="264"></video>
+            <h1>Will reproduce one video after the other automatically</h1>
+            <h3>First 3 of the bad videos and then 3 of the good videos</h3>
             <script>
-                  var player = videojs('example-video');
-                    
-                    //player.play();
-            </script>
-
- -->
-            <video id="video" class="video-js vjs-default-skin" controls data-setup="" width="640" height="264"></video>
-            <h1></h1>
-            <button type="button" data-action="prev">Previous</button>
-            <button type="button" data-action="next">Next</button>
-            <script>
-              var videos = [
-                {
-                  src : [
-                    'http://bad-videos.dev.zype.com/video1/zfaeEvbmOKYqguNR.m3u8'
-                  ],
-                  type:'application/x-mpegURL',
-                  poster : 'http://flowplayer.org/media/img/demos/minimalist.jpg',
-                  title : 'Video 1'
-                },
-                {
-                  src : [
-                    'http://bad-videos.dev.zype.com/video4/U477ESYmVc5XQTTK.m3u8'
-                  ],
-                  type:'application/x-mpegURL',
-                  poster : 'http://flowplayer.org/media/img/demos/playlist/railway_station.jpg',
-                  title : 'Video 2'
-                },
-                {
-                  src : [
-                    'http://bad-videos.dev.zype.com/video3/_at63NQWIh9IIx7m.m3u8'
-                  ],
-                  type:'application/x-mpegURL',
-                  poster : 'http://flowplayer.org/media/img/demos/functional.jpg',
-                  title : 'Video 3'
-                }
-              ];
               var player = videojs('video');
-              player.playList(videos, {
-                getVideoSource: function(vid, cb) {
-                  cb(vid.src, vid.poster);
-                }
-              });
-              $('[data-action=prev]').on('click', function(e) {
-                player.prev();
-              });
-              $('[data-action=next]').on('click', function(e) {
-                player.next();
-              });
+              player.playlist([{
+                sources: [{
+                  src: 'http://bad-videos.dev.zype.com/video1/zfaeEvbmOKYqguNR.m3u8',
+                  type: 'application/x-mpegURL'
+                }],
+                poster: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRdOft4Vpuk_KLL0VhDPIsTlvbqJZE7UwtwX0aYZ2Kvj_SCdt_Z'
+              }, {
+                sources: [{
+                  src: 'http://bad-videos.dev.zype.com/video4/U477ESYmVc5XQTTK.m3u8',
+                  type: 'application/x-mpegURL'
+                }],
+                poster: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRdOft4Vpuk_KLL0VhDPIsTlvbqJZE7UwtwX0aYZ2Kvj_SCdt_Z'
+              }, {
+                sources: [{
+                  src: 'http://bad-videos.dev.zype.com/video3/_at63NQWIh9IIx7m.m3u8',
+                  type: 'application/x-mpegURL'
+                }],
+                poster: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRdOft4Vpuk_KLL0VhDPIsTlvbqJZE7UwtwX0aYZ2Kvj_SCdt_Z'
+              }, {
+                sources: [{
+                  src: 'http://bad-videos.dev.zype.com/good-video1/ArduinoTheDocumentary.mp4',
+                  type: 'video/mp4'
+                }],
+                poster: 'http://d2ydh70d4b5xgv.cloudfront.net/images/4/7/star-wars-solid-movie-logo-sign-emblem-unique-metal-item-custom-made-art-piece-6246301ed0badfc8eacf80c2700043bc.jpg'
+              }, {
+                sources: [{
+                  src: 'http://bad-videos.dev.zype.com/good-video2/sintel-2048-stereo.mp4',
+                  type: 'video/mp4'
+                }],
+                poster: 'http://d2ydh70d4b5xgv.cloudfront.net/images/4/7/star-wars-solid-movie-logo-sign-emblem-unique-metal-item-custom-made-art-piece-6246301ed0badfc8eacf80c2700043bc.jpg'
+              }, {
+                sources: [{
+                  src: 'http://bad-videos.dev.zype.com/good-video3/bipbopall.m3u8',
+                  type: 'application/x-mpegURL'
+                }],
+                poster: 'http://d2ydh70d4b5xgv.cloudfront.net/images/4/7/star-wars-solid-movie-logo-sign-emblem-unique-metal-item-custom-made-art-piece-6246301ed0badfc8eacf80c2700043bc.jpg'
+              }]);
+
+              /*
+              Small videos for testing
+              player.playlist([{
+                sources: [{
+                  src: 'http://media.w3.org/2010/05/sintel/trailer.mp4',
+                  type: 'video/mp4'
+                }],
+                poster: 'http://media.w3.org/2010/05/sintel/poster.png'
+              }, {
+                sources: [{
+                  src: 'http://media.w3.org/2010/05/bunny/trailer.mp4',
+                  type: 'video/mp4'
+                }],
+                poster: 'http://media.w3.org/2010/05/bunny/poster.png'
+              }, {
+                sources: [{
+                  src: 'http://vjs.zencdn.net/v/oceans.mp4',
+                  type: 'video/mp4'
+                }],
+                poster: 'http://www.videojs.com/img/poster.jpg'
+              }, {
+                sources: [{
+                  src: 'http://media.w3.org/2010/05/bunny/movie.mp4',
+                  type: 'video/mp4'
+                }],
+                poster: 'http://media.w3.org/2010/05/bunny/poster.png'
+              }, {
+                sources: [{
+                  src: 'http://media.w3.org/2010/05/video/movie_300.mp4',
+                  type: 'video/mp4'
+                }],
+                poster: 'http://media.w3.org/2010/05/video/poster.png'
+              }]);
+              */
+              // Play through the playlist automatically.
+              player.playlist.autoadvance(0);
             </script>
 
           </div>
