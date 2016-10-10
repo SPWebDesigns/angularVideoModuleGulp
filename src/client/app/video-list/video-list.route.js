@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('app.admin')
+    .module('app.video-list')
     .run(appRun);
 
   appRun.$inject = ['routerHelper'];
@@ -14,16 +14,16 @@
   function getStates() {
     return [
       {
-        state: 'admin',
+        state: 'video-list',
         config: {
-          url: '/admin',
-          templateUrl: 'app/admin/admin.html',
-          controller: 'AdminController',
+          url: '/',
+          templateUrl: 'app/video-list/video-list.html',
+          controller: 'VideoListController',
           controllerAs: 'vm',
-          title: 'Admin',
+          title: 'Video List',
           settings: {
-            nav: 2,
-            content: '<i class="fa fa-lock"></i> Video Playlist'
+            nav: 1,
+            content: '<i class="fa fa-dashboard"></i> Video List'
           }
         }
       }

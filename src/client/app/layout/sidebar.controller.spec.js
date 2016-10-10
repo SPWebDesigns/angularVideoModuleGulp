@@ -4,7 +4,7 @@ describe('layout', function() {
     var controller;
     var views = {
       dashboard: 'app/dashboard/dashboard.html',
-      customers: 'app/customers/customers.html'
+      VideoPlayList: 'app/videoplaylist/video-playlist.html'
     };
 
     beforeEach(function() {

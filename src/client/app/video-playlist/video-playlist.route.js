@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('app.dashboard')
+    .module('app.video-playlist')
     .run(appRun);
 
   appRun.$inject = ['routerHelper'];
@@ -14,16 +14,16 @@
   function getStates() {
     return [
       {
-        state: 'dashboard',
+        state: 'video-playlist',
         config: {
-          url: '/',
-          templateUrl: 'app/dashboard/dashboard.html',
-          controller: 'DashboardController',
+          url: '/video-playlist',
+          templateUrl: 'app/video-playlist/video-playlist.html',
+          controller: 'VideoPlayListController',
           controllerAs: 'vm',
-          title: 'dashboard',
+          title: 'VideoPlayList',
           settings: {
-            nav: 1,
-            content: '<i class="fa fa-dashboard"></i> Video List'
+            nav: 3,
+            content: '<i class="fa fa-lock"></i> Video Playlist'
           }
         }
       }

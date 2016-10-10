@@ -52,7 +52,7 @@
               player1.splice(i,1);
               i--;
         }
-        for(var i=0; i<= data.bads.length;i++){
+        for(var i=0; i< data.bads.length;i++){
           videojs(data.bads[i].id).ready(function(){
             player1.push(this);
           });
@@ -66,7 +66,7 @@
               player2.splice(i,1);
               i--;
         }
-        for(var i=0; i<= data.goods.length;i++){
+        for(var i=0; i< data.goods.length;i++){
             videojs(data.goods[i].id).ready(function(){
               player2.push(this);
           });

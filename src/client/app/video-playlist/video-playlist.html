@@ -47,12 +47,17 @@
                 }],
                 poster: 'http://d2ydh70d4b5xgv.cloudfront.net/images/4/7/star-wars-solid-movie-logo-sign-emblem-unique-metal-item-custom-made-art-piece-6246301ed0badfc8eacf80c2700043bc.jpg'
               }]);
-
               // Play through the playlist automatically.
               player.playlist.autoadvance(0);
-              /*
-              Small videos for testing
-              player.playlist([{
+            </script>
+            
+            <video id="videoSmallVideos" class="video-js vjs-default-skin vjs-big-play-centered" controls data-setup="" width="640" height="264"></video>
+            <h1>Will reproduce one video after the other automatically</h1>
+            <h3>These are small mp4 videos to test better the performance</h3>
+            <script>
+              var player2 = videojs('videoSmallVideos');
+              //Small videos for testing
+              player2.playlist([{
                 sources: [{
                   src: 'http://media.w3.org/2010/05/sintel/trailer.mp4',
                   type: 'video/mp4'
@@ -83,10 +88,9 @@
                 }],
                 poster: 'http://media.w3.org/2010/05/video/poster.png'
               }]);
-              */
-              
+              // Play through the playlist automatically.
+              player2.playlist.autoadvance(0);
             </script>
-
           </div>
         </div>
       </div>
