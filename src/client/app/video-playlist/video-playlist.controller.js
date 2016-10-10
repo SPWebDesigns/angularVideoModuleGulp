@@ -10,8 +10,7 @@
   function VideoPlayListController(logger, $timeout, videoList ) {
     var vm = this;
     vm.title = 'Video Playlist';
-    //$timeout(videoList.getvideoPlayList, 0);
-
-    
+    $timeout(videoList.getvideoPlayListOriginal, 0);
+    $timeout(videoList.getvideoPlayListSmallSize, 0);
   }
 })();

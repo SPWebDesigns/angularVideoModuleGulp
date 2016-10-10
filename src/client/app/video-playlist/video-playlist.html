@@ -7,90 +7,10 @@
           <div class="widget-content user">
             <h1>Will reproduce one video after the other automatically</h1>
             <h3>First 3 of the bad videos and then 3 of the good videos</h3>
-            <video id="video" class="video-js vjs-default-skin vjs-big-play-centered" controls data-setup="" width="640" height="264"></video>
-            <script>
-              var player = videojs('video');
-              player.playlist([{
-                sources: [{
-                  src: 'http://bad-videos.dev.zype.com/video1/zfaeEvbmOKYqguNR.m3u8',
-                  type: 'application/x-mpegURL'
-                }],
-                poster: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRdOft4Vpuk_KLL0VhDPIsTlvbqJZE7UwtwX0aYZ2Kvj_SCdt_Z'
-              }, {
-                sources: [{
-                  src: 'http://bad-videos.dev.zype.com/video4/U477ESYmVc5XQTTK.m3u8',
-                  type: 'application/x-mpegURL'
-                }],
-                poster: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRdOft4Vpuk_KLL0VhDPIsTlvbqJZE7UwtwX0aYZ2Kvj_SCdt_Z'
-              }, {
-                sources: [{
-                  src: 'http://bad-videos.dev.zype.com/video3/_at63NQWIh9IIx7m.m3u8',
-                  type: 'application/x-mpegURL'
-                }],
-                poster: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRdOft4Vpuk_KLL0VhDPIsTlvbqJZE7UwtwX0aYZ2Kvj_SCdt_Z'
-              }, {
-                sources: [{
-                  src: 'http://bad-videos.dev.zype.com/good-video1/ArduinoTheDocumentary.mp4',
-                  type: 'video/mp4'
-                }],
-                poster: 'http://d2ydh70d4b5xgv.cloudfront.net/images/4/7/star-wars-solid-movie-logo-sign-emblem-unique-metal-item-custom-made-art-piece-6246301ed0badfc8eacf80c2700043bc.jpg'
-              }, {
-                sources: [{
-                  src: 'http://bad-videos.dev.zype.com/good-video2/sintel-2048-stereo.mp4',
-                  type: 'video/mp4'
-                }],
-                poster: 'http://d2ydh70d4b5xgv.cloudfront.net/images/4/7/star-wars-solid-movie-logo-sign-emblem-unique-metal-item-custom-made-art-piece-6246301ed0badfc8eacf80c2700043bc.jpg'
-              }, {
-                sources: [{
-                  src: 'http://bad-videos.dev.zype.com/good-video3/bipbopall.m3u8',
-                  type: 'application/x-mpegURL'
-                }],
-                poster: 'http://d2ydh70d4b5xgv.cloudfront.net/images/4/7/star-wars-solid-movie-logo-sign-emblem-unique-metal-item-custom-made-art-piece-6246301ed0badfc8eacf80c2700043bc.jpg'
-              }]);
-              // Play through the playlist automatically.
-              player.playlist.autoadvance(0);
-            </script>
-
+            <video id="videoOriginals" class="video-js vjs-default-skin vjs-big-play-centered" controls data-setup="" width="640" height="264"></video>
             <h1>Will reproduce one video after the other automatically</h1>
             <h3>These are small mp4 videos to test better the performance</h3>
             <video id="videoSmallVideos" class="video-js vjs-default-skin vjs-big-play-centered" controls data-setup="" width="640" height="264"></video>
-            <script>
-              var player2 = videojs('videoSmallVideos');
-              //Small videos for testing
-              player2.playlist([{
-                sources: [{
-                  src: 'http://media.w3.org/2010/05/sintel/trailer.mp4',
-                  type: 'video/mp4'
-                }],
-                poster: 'http://media.w3.org/2010/05/sintel/poster.png'
-              }, {
-                sources: [{
-                  src: 'http://media.w3.org/2010/05/bunny/trailer.mp4',
-                  type: 'video/mp4'
-                }],
-                poster: 'http://media.w3.org/2010/05/bunny/poster.png'
-              }, {
-                sources: [{
-                  src: 'http://vjs.zencdn.net/v/oceans.mp4',
-                  type: 'video/mp4'
-                }],
-                poster: 'http://www.videojs.com/img/poster.jpg'
-              }, {
-                sources: [{
-                  src: 'http://media.w3.org/2010/05/bunny/movie.mp4',
-                  type: 'video/mp4'
-                }],
-                poster: 'http://media.w3.org/2010/05/bunny/poster.png'
-              }, {
-                sources: [{
-                  src: 'http://media.w3.org/2010/05/video/movie_300.mp4',
-                  type: 'video/mp4'
-                }],
-                poster: 'http://media.w3.org/2010/05/video/poster.png'
-              }]);
-              // Play through the playlist automatically.
-              player2.playlist.autoadvance(0);
-            </script>
           </div>
         </div>
       </div>

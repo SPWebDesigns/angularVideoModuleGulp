@@ -5,23 +5,24 @@
     .module('app.core')
     .factory('videoList', videoList);
 
-  videoList.$inject = ['$http', '$q'];
+  videoList.$inject = ['$http', '$q', 'videoListInfo'];
   /* @ngInject */
-  function videoList($http, $q) {
+  function videoList($http, $q, videoListInfo) {
     var videoData=null;
-    var playerVideoPlayList=null;
+    var playerVideoPlayListSmall, playerVideoPlayListOriginals;
     var player1=[];
     var player2=[];
-    
+    var originals = videoListInfo.getOriginalVideos();
+    var small = videoListInfo.getSmallVideos();
     var service = {
       getvideoList: getvideoList,
-      getvideoPlayList: getvideoPlayList,
       initVideosBad: initVideosBad,
       initVideosGood: initVideosGood,
+      getvideoPlayListOriginal: getvideoPlayListOriginal,
+      getvideoPlayListSmallSize: getvideoPlayListSmallSize,
     };
     
     return service;
-
 
     function getvideoList() {
       var defer=$q.defer();
@@ -73,60 +74,26 @@
         }
     }
 
-    /* getvideoPlayList Not Implemented*/
-    function getvideoPlayList() {
-
-      var videoPlayListData=[{
-          sources: [{
-            src: 'http://bad-videos.dev.zype.com/video1/zfaeEvbmOKYqguNR.m3u8',
-            type: 'application/x-mpegURL'
-          }],
-          poster: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRdOft4Vpuk_KLL0VhDPIsTlvbqJZE7UwtwX0aYZ2Kvj_SCdt_Z'
-        }, {
-          sources: [{
-            src: 'http://bad-videos.dev.zype.com/video4/U477ESYmVc5XQTTK.m3u8',
-            type: 'application/x-mpegURL'
-          }],
-          poster: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRdOft4Vpuk_KLL0VhDPIsTlvbqJZE7UwtwX0aYZ2Kvj_SCdt_Z'
-        }, {
-          sources: [{
-            src: 'http://bad-videos.dev.zype.com/video3/_at63NQWIh9IIx7m.m3u8',
-            type: 'application/x-mpegURL'
-          }],
-          poster: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRdOft4Vpuk_KLL0VhDPIsTlvbqJZE7UwtwX0aYZ2Kvj_SCdt_Z'
-        }, {
-          sources: [{
-            src: 'http://bad-videos.dev.zype.com/good-video1/ArduinoTheDocumentary.mp4',
-            type: 'video/mp4'
-          }],
-          poster: 'http://d2ydh70d4b5xgv.cloudfront.net/images/4/7/star-wars-solid-movie-logo-sign-emblem-unique-metal-item-custom-made-art-piece-6246301ed0badfc8eacf80c2700043bc.jpg'
-        }, {
-          sources: [{
-            src: 'http://bad-videos.dev.zype.com/good-video2/sintel-2048-stereo.mp4',
-            type: 'video/mp4'
-          }],
-          poster: 'http://d2ydh70d4b5xgv.cloudfront.net/images/4/7/star-wars-solid-movie-logo-sign-emblem-unique-metal-item-custom-made-art-piece-6246301ed0badfc8eacf80c2700043bc.jpg'
-        }, {
-          sources: [{
-            src: 'http://bad-videos.dev.zype.com/good-video3/bipbopall.m3u8',
-            type: 'application/x-mpegURL'
-          }],
-          poster: 'http://d2ydh70d4b5xgv.cloudfront.net/images/4/7/star-wars-solid-movie-logo-sign-emblem-unique-metal-item-custom-made-art-piece-6246301ed0badfc8eacf80c2700043bc.jpg'
-      }];
-      //playerVideoPlayList = videojs('videoPlayList');
-      if(playerVideoPlayList){
-        //playerVideoPlayList.dispose();
-        playerVideoPlayList.playlist(videoPlayListData);
-
-        playerVideoPlayList.playlist.autoadvance(0);
+    function getvideoPlayListOriginal() {
+      if(playerVideoPlayListOriginals){
+          playerVideoPlayListOriginals.dispose();
       }
-      videojs('videoPlayList').ready(function(){
-        console.log('videoPlayList');
-        playerVideoPlayList = this;
-        console.log('playerVideoPlayList');
-        console.log(playerVideoPlayList);
+      videojs('videoOriginals').ready(function(){
+        playerVideoPlayListOriginals = this;
+        playerVideoPlayListOriginals.playlist(originals);
+        playerVideoPlayListOriginals.playlist.autoadvance(0);
       }); 
     }
 
+    function getvideoPlayListSmallSize() {
+      if(playerVideoPlayListSmall){
+          playerVideoPlayListSmall.dispose();
+      }
+      videojs('videoSmallVideos').ready(function(){
+        playerVideoPlayListSmall = this;
+        playerVideoPlayListSmall.playlist(small);
+        playerVideoPlayListSmall.playlist.autoadvance(0);
+      }); 
+    }
   }
 })();

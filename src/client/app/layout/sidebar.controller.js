@@ -11,8 +11,6 @@
     var vm = this;
     //$window.location.reload();
     var states = routerHelper.getStates();
-    console.log('states');
-    console.log(states);
     vm.isCurrent = isCurrent;
     vm.reload= reload;
     activate();
