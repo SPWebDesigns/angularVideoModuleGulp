@@ -5,9 +5,9 @@
         <div class="widget wviolet">
           <div ht-widget-header title="{{vm.title}}"></div>
           <div class="widget-content user">
-            <video id="video" class="video-js vjs-default-skin vjs-big-play-centered" controls data-setup="" width="640" height="264"></video>
             <h1>Will reproduce one video after the other automatically</h1>
             <h3>First 3 of the bad videos and then 3 of the good videos</h3>
+            <video id="video" class="video-js vjs-default-skin vjs-big-play-centered" controls data-setup="" width="640" height="264"></video>
             <script>
               var player = videojs('video');
               player.playlist([{
@@ -50,10 +50,10 @@
               // Play through the playlist automatically.
               player.playlist.autoadvance(0);
             </script>
-            
-            <video id="videoSmallVideos" class="video-js vjs-default-skin vjs-big-play-centered" controls data-setup="" width="640" height="264"></video>
+
             <h1>Will reproduce one video after the other automatically</h1>
             <h3>These are small mp4 videos to test better the performance</h3>
+            <video id="videoSmallVideos" class="video-js vjs-default-skin vjs-big-play-centered" controls data-setup="" width="640" height="264"></video>
             <script>
               var player2 = videojs('videoSmallVideos');
               //Small videos for testing
